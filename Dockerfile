@@ -13,4 +13,5 @@ RUN apt-get dist-upgrade -y
 RUN apt-get install -y --force-yes --no-install-recommends \
 	lhasa \
 	adtools-gcc \
-	adtools-sdk
+	adtools-sdk \
+	make
