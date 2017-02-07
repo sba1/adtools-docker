@@ -6,6 +6,9 @@
 
 FROM debian:jessie
 
+ARG apt_proxy=""
+RUN if [ -n "$apt_proxy" ]; then echo 'Acquire::http { Proxy "'$apt_proxy'"; }' >>/etc/apt/apt.conf; fi
+
 RUN echo "deb http://dl.bintray.com/sba1/adtools-deb /"  >>/etc/apt/sources.list
 
 RUN apt-get update
