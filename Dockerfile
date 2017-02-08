@@ -23,5 +23,6 @@ RUN apt-get install -y --force-yes --no-install-recommends \
 	ca-certificates
 
 RUN apt-get install -y --force-yes --no-install-recommends \
+	adtools-binutils \
 	adtools-gcc \
 	adtools-sdk
