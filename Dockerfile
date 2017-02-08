@@ -13,8 +13,15 @@ RUN echo "deb http://dl.bintray.com/sba1/adtools-deb /"  >>/etc/apt/sources.list
 
 RUN apt-get update
 RUN apt-get dist-upgrade -y
+
 RUN apt-get install -y --force-yes --no-install-recommends \
 	lhasa \
+	make \
+	git \
+	bzip2 \
+	less \
+	ca-certificates
+
+RUN apt-get install -y --force-yes --no-install-recommends \
 	adtools-gcc \
-	adtools-sdk \
-	make
+	adtools-sdk
