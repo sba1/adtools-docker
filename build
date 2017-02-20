@@ -1,0 +1,10 @@
+#!/bin/bash -x
+#
+# This simple script builds the the application for AmigaOS 4.x
+#
+
+# Build the image
+docker build -t adtools .
+
+# Now extract the generated binary
+docker run adtools tar c target | tar x

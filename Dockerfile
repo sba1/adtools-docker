@@ -26,3 +26,8 @@ RUN apt-get install -y --force-yes --no-install-recommends \
 	adtools-binutils \
 	adtools-gcc \
 	adtools-sdk
+
+COPY . source
+WORKDIR source
+
+RUN make
